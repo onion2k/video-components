@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Kanit:600);
+
+.bg {
+  width: auto;
+  font: normal 600 5vw/1.5 Kanit, sans-serif;
+  background-color: red;
+  overflow: hidden;
+  padding: 0 1em;
+  transform: skew(-15deg);
+}
+
+.f {
+  transform: skew(15deg);
+}
+
+.text-intro > span > span {
+  animation: slide-in 0.25s cubic-bezier(0.54, 0.21, 0.87, 1.71) both;
+  animation-delay: calc(120ms * var(--char-index));
+  opacity: 0;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(1em) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
