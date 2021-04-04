@@ -1,0 +1,13 @@
+.arid-outer {
+  width: 100%;
+  height: 100%;
+}
+
+.arid-inner {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  clip-path: polygon(calc(var(--lo) + 31%) 21%, calc(var(--lo) + 78%) 32%, calc(var(--lo) + 79%) 70%, calc(var(--lo) + 15%) 64%);
+}

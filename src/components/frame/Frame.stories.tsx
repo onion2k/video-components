@@ -1,23 +1,15 @@
 import React, { ComponentProps } from 'react';
 import { Story } from '@storybook/react';
 
-import { Squares } from './Squares';
+import { Frame } from './Frame';
 
 export default {
-  title: 'Squares',
-  component: Squares,
+  title: 'Frame',
+  component: Frame,
   decorators: [(Story: any) => <div style={{ width: '1200px', height: '675px', backgroundColor: '#dddddd' }}><Story /></div>],
-  argTypes: {
-    direction: {
-      control: {
-        type: 'radio',
-        options: ['row', 'col', 'tl']
-      }
-    }
-  }
 };
 
-const Template: Story<ComponentProps<typeof Squares>> = (args) => <Squares {...args} />;
+const Template: Story<ComponentProps<typeof Frame>> = (args) => <Frame {...args} />;
 
 export const Defaults = Template.bind({});
 Defaults.args = {

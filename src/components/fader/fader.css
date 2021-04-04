@@ -1,0 +1,21 @@
+.fader {
+  width: 100%;
+  height: 100%;
+}
+
+
+.fader {
+  animation: fade 500ms linear both;
+  background-color: black;
+  opacity: 0;
+}
+
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
