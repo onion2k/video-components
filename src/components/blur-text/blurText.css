@@ -1,0 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Kanit:600);
+
+.blur {
+  position: relative;
+  font: normal 600 5vw/1.5 Kanit, sans-serif;
+}
+
+.clone {
+  position: absolute;
+  opacity: 0.1;
+}
+
+.blur > .clone {
+  animation: slide 3s cubic-bezier(0,0.9,0.9,0) both;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(20em);
+  }
+  100% {
+    transform: translateX(-8em);
+  }
+}

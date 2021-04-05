@@ -5,11 +5,14 @@ import "./split.css"
 interface TextIntroProps {
   text: string;
   color?: string;
+  backgroundColor?: string;
 }
 
-export const TextIntro: React.FC<TextIntroProps> = ({ text, color = "black" }) => {
+export const TextIntro: React.FC<TextIntroProps> = ({ text, color = "white", backgroundColor="black" }) => {
   return (
-    <div className="bg">
+    <div className="bg"
+      style={{ backgroundColor }}
+    >
       <div className="f">
         <div className="text-intro" style={{ color }}>
           <SplitText text={text} />

@@ -4,17 +4,17 @@ import bg from './code.jpg';
 
 interface TextIntroProps {
   color?: string;
-  leftOffset: number;
+  frame: number;
 }
 
-export const Arid: React.FC<TextIntroProps> = ({ color = "black", leftOffset = 0 }) => {
+export const Arid: React.FC<TextIntroProps> = ({ color = "black", frame = 0 }) => {
   return (
     <div className="arid-outer" style={{
       backgroundColor: color,
     }}>
       <div className={'arid-inner'} style={{
         backgroundImage: `url(${bg})`,
-        "--lo": `${leftOffset}px`,
+        "--lo": `${frame - 500}px`,
       } as React.CSSProperties} >
         Content
       </div>

@@ -1,0 +1,30 @@
+.burns-outer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.burns-inner {
+  position: absolute;
+  width: calc(100% + 8em);
+  height: calc(100% + 8em);
+  top: -4em;
+  left: -4em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: initial;
+}
+
+.burns-inner {
+  animation: burns 3s linear both;
+}
+
+@keyframes burns {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(4em) translateY(-3em) scale(1.1);
+  }
+}

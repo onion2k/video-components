@@ -1,11 +1,11 @@
 import React, { ComponentProps } from 'react';
 import { Story } from '@storybook/react';
 
-import { Arid } from './Arid';
+import { Burns } from './Burns';
 
 export default {
-  title: 'Arid',
-  component: Arid,
+  title: 'Burns',
+  component: Burns,
   decorators: [(Story: any) => <div style={{ width: '1200px', height: '675px', backgroundColor: '#dddddd' }}><Story /></div>],
   argTypes: {
     frame: {
@@ -18,7 +18,7 @@ export default {
   }
 };
 
-const Template: Story<ComponentProps<typeof Arid>> = (args) => <Arid {...args} />;
+const Template: Story<ComponentProps<typeof Burns>> = (args) => <Burns {...args} />;
 
 export const Defaults = Template.bind({});
 Defaults.args = {

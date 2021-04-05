@@ -13,11 +13,13 @@ const Template: Story<ComponentProps<typeof TextIntro>> = (args) => <TextIntro {
 export const Defaults = Template.bind({});
 Defaults.args = {
   text: "Hello World",
-  color: "white"
+  color: "white",
+  backgroundColor: "black"
 };
 
 export const HelloWorld2 = Template.bind({});
 HelloWorld2.args = {
   text: "Hello There",
-  color: "white"
+  color: "white",
+  backgroundColor: "black"
 };
