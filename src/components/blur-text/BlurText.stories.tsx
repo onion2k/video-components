@@ -6,20 +6,20 @@ import { BlurText } from './BlurText';
 export default {
   title: 'BlurText',
   component: BlurText,
-  argTypes: {
-    leftOffset: {
-      control: {
-        type: 'range',
-        min: -1000,
-        max: 1000
-      }
-    }
-  }
 };
 
 const Template: Story<ComponentProps<typeof BlurText>> = (args) => <BlurText {...args} />;
 
-export const Defaults = Template.bind({});
-Defaults.args = {
-  text: "Hello World"
+export const Left = Template.bind({});
+Left.args = {
+  text: "Hello World",
+  direction: "left",
+  color: "black"
+};
+
+export const Right = Template.bind({});
+Right.args = {
+  text: "Hello World",
+  direction: "right",
+  color: "red"
 };

@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Kanit:600);
+
 .frame-outer {
   width: 100%;
   height: 100%;
@@ -7,6 +9,7 @@
 
 .frame {
   position: relative;
+  font: normal 600 5vw/1.5 Kanit, sans-serif;
   width: 100%;
   height: 100%;
   background-color: #dddddd;
@@ -26,6 +29,41 @@
   transform: rotate(-3deg);
 }
 
+.frame {
+  animation: rotate-left 5000ms linear both;
+}
+
+.frame:after {
+  animation: rotate-left-2 5000ms linear both;
+}
+
+@keyframes rotate-left {
+  from {
+    transform: rotate(2deg);
+  }
+  to {
+    transform: rotate(-2deg);
+  }
+}
+
+@keyframes rotate-left-2 {
+  from {
+    transform: rotate(3deg);
+  }
+  to {
+    transform: rotate(-3deg);
+  }
+}
+
 .frame-inner {
-  transform: rotate(2deg);
+  animation: rotate-right 5000ms linear both;
+}
+
+@keyframes rotate-right {
+  from {
+    transform: rotate(-2deg);
+  }
+  to {
+    transform: rotate(2deg);
+  }
 }

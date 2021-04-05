@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Kanit:600);
 
 .bg {
-  width: auto;
+  display: inline-block;
   font: normal 600 5vw/1.5 Kanit, sans-serif;
   background-color: red;
   overflow: hidden;

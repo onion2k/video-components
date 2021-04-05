@@ -10,8 +10,22 @@
   opacity: 0.1;
 }
 
-.blur > .clone {
-  animation: slide 3s cubic-bezier(0,0.9,0.9,0) both;
+.blur.left > .clone {
+  animation-name: slide;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0,0.9,0.9,0);
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  transform: translateX(20em);
+}
+
+.blur.right > .clone {
+  animation-name: slide;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0,0.9,0.9,0);
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+  transform: translateX(-8em);
 }
 
 @keyframes slide {
