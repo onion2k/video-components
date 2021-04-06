@@ -30,8 +30,8 @@
   display: inline-block;
   margin-left: 30px;
   animation-name: ring-in;
-  animation-delay: 1000ms;
-  animation-duration: 2s;
+  animation-delay: 1250ms;
+  animation-duration: 1.5s;
   animation-fill-mode: forwards;
   transform-origin: center;
   opacity: 0;
@@ -43,20 +43,20 @@
     opacity: 0;
   }
   20% {
-    transform: scale(1) rotate(-15deg);
+    transform: scale(1) rotate(-25deg);
     opacity: 1;
   }
   40% {
-    transform: rotate(15deg);
+    transform: rotate(25deg);
   }
   60% {
-    transform: rotate(-15deg);
+    transform: rotate(-25deg);
   }
   80% {
-    transform: rotate(15deg);
+    transform: rotate(25deg);
   }
   100% {
-    transform: rotate(-15deg);
+    transform: rotate(-25deg);
     opacity: 1;
   }
 }
