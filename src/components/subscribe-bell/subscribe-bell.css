@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Kanit:600);
+
+.subscribe {
+  display: inline-block;
+  font: normal 600 5vw/1.5 Kanit, sans-serif;
+  background-color: red;
+  color: white;
+  overflow: hidden;
+  padding: 0 1em;
+}
+
+.text-intro > span > span {
+  animation: slide-in 0.25s cubic-bezier(0.54, 0.21, 0.87, 1.71) both;
+  animation-delay: calc(60ms * var(--char-index));
+  opacity: 0;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(1em) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.bell {
+  display: inline-block;
+  margin-left: 30px;
+  animation-name: ring-in;
+  animation-delay: 1000ms;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  transform-origin: center;
+  opacity: 0;
+}
+
+@keyframes ring-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  20% {
+    transform: scale(1) rotate(-15deg);
+    opacity: 1;
+  }
+  40% {
+    transform: rotate(15deg);
+  }
+  60% {
+    transform: rotate(-15deg);
+  }
+  80% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(-15deg);
+    opacity: 1;
+  }
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { SplitText } from '../split-text/SplitText'
-import "./split.css"
+import "./text-intro.css"
 
 interface TextIntroProps {
   text: string;
