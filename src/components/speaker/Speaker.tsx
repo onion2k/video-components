@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface SpeakerProps {
   text: string;
@@ -6,10 +6,13 @@ interface SpeakerProps {
 
 export const Speaker: React.FC<SpeakerProps> = ({ text }) => {
 
-  useEffect(()=>{
-    const ss = window.speechSynthesis;
+  const [ss,] = useState(window.speechSynthesis)
 
+  useEffect(()=>{
     if (ss) {
+
+      ss.cancel();
+      
       const voices = ss.getVoices();
 
       const utterThis = new SpeechSynthesisUtterance(text);
@@ -22,7 +25,7 @@ export const Speaker: React.FC<SpeakerProps> = ({ text }) => {
 
     }
 
-  });
+  }, [ss, text]);
 
   return null;
 };
