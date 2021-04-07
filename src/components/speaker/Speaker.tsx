@@ -1,21 +1,24 @@
 import React, { useState, useEffect } from 'react';
+import useDebounce from './useDebounce'
 
 interface SpeakerProps {
   text: string;
+  debounce?: boolean;
 }
 
-export const Speaker: React.FC<SpeakerProps> = ({ text }) => {
+export const Speaker: React.FC<SpeakerProps> = ({ text, debounce=false }) => {
 
   const [ss,] = useState(window.speechSynthesis)
+  const debText = useDebounce(text, 500, debounce)
 
   useEffect(()=>{
     if (ss) {
 
       ss.cancel();
-      
+
       const voices = ss.getVoices();
 
-      const utterThis = new SpeechSynthesisUtterance(text);
+      const utterThis = new SpeechSynthesisUtterance(debText);
 
       utterThis.voice = voices[0];
       utterThis.pitch = 1;
@@ -25,7 +28,7 @@ export const Speaker: React.FC<SpeakerProps> = ({ text }) => {
 
     }
 
-  }, [ss, text]);
+  }, [ss, debText, debounce]);
 
   return null;
 };
