@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import useDebounce from './useDebounce'
-
 interface SpeakerProps {
   text: string;
-  debounce?: boolean;
+  immediate?: boolean;
 }
 
-export const Speaker: React.FC<SpeakerProps> = ({ text, debounce=false }) => {
+export const Speaker: React.FC<SpeakerProps> = ({ text, immediate=true }) => {
 
   const [ss,] = useState(window.speechSynthesis)
-  const debText = useDebounce(text, 500, debounce)
+  const debText = useDebounce(text, 500, immediate)
 
   useEffect(()=>{
     if (ss) {
@@ -28,7 +27,7 @@ export const Speaker: React.FC<SpeakerProps> = ({ text, debounce=false }) => {
 
     }
 
-  }, [ss, debText, debounce]);
+  }, [ss, debText, immediate]);
 
   return null;
 };

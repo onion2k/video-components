@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function useDebounce(value:any, delay:number, toggle=true) {
+export default function useDebounce(value:any, delay:number, immediate:boolean=true) {
   const [debouncedValue, setDebouncedValue] = useState(value);
 
   useEffect(
@@ -8,14 +8,14 @@ export default function useDebounce(value:any, delay:number, toggle=true) {
       const handler = setTimeout(() => {
         setDebouncedValue(value);
       }, delay);
-      if (toggle===false) {
+      if (immediate===true) {
         setDebouncedValue(value);
       }
       return () => {
         clearTimeout(handler);
       };
     },
-    [value, toggle] 
+    [value, immediate] 
   );
 
   return debouncedValue;
