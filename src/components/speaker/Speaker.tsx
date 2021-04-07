@@ -18,7 +18,7 @@ export const Speaker: React.FC<SpeakerProps> = ({ text }) => {
       utterThis.pitch = 1;
       utterThis.rate = 1;
 
-      // ss.speak(utterThis);
+      ss.speak(utterThis);
 
     }
 
